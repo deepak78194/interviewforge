@@ -19,7 +19,7 @@ function calculateStreaks(history: HistoryEntry[]) {
 
   let current = 0;
   if (sorted[0] === today || sorted[0] === yesterday) {
-    let checkDate = new Date(sorted[0]);
+    const checkDate = new Date(sorted[0]);
     for (let i = 0; i < sorted.length; i++) {
       const expected = checkDate.toISOString().split('T')[0];
       if (sorted[i] === expected) {

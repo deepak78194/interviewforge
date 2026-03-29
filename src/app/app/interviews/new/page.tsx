@@ -1,14 +1,8 @@
-import dynamic from 'next/dynamic';
 import { getJobInfos } from '@/features/jobInfos/dbCache';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-
-const VoiceInterview = dynamic(
-  () => import('@/features/interviews/VoiceInterview').then(m => m.VoiceInterview),
-  { ssr: false, loading: () => <p className="text-muted-foreground">Loading interview...</p> }
-);
+import { VoiceInterviewWrapper } from '@/features/interviews/VoiceInterviewWrapper';
 
 interface NewInterviewPageProps {
   searchParams: Promise<{ jobId?: string }>;
@@ -79,7 +73,7 @@ export default async function NewInterviewPage({ searchParams }: NewInterviewPag
 
       <Card className="min-h-[500px]">
         <CardContent className="pt-6">
-          <VoiceInterview
+          <VoiceInterviewWrapper
             jobInfo={{
               id: selectedJob.id,
               title: selectedJob.title,

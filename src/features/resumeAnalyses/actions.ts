@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 import { analyzeResume } from '@/services/ai/resumeAnalysis';
 import { createResumeAnalysis } from './db';
 
-export const RESUME_ANALYSIS_CACHE_TAG = 'resume-analyses';
+const RESUME_ANALYSIS_CACHE_TAG = 'resume-analyses';
 
 export async function analyzeResumeAction(jobInfoId: string, jobTitle: string, jobDescription: string, formData: FormData) {
   const resumeText = formData.get('resumeText') as string;

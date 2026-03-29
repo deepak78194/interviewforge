@@ -1,7 +1,7 @@
 import { pgTable, varchar, pgEnum, integer } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { id, createdAt, updatedAt } from "../schemaHelpers";
-import { difficultyEnum } from "./question";
+import { difficultyEnum } from "./enums";
 
 export const topicCategoryEnum = pgEnum("topic_category", [
   "data-structures",
