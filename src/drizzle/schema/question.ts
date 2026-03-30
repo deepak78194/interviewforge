@@ -1,17 +1,11 @@
-import { pgTable, varchar, pgEnum, uuid, boolean, integer } from "drizzle-orm/pg-core";
+import { pgTable, varchar, uuid, boolean, integer } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { id, createdAt, updatedAt } from "../schemaHelpers";
+import { difficultyEnum, questionTypeEnum } from "./enums";
 import { JobInfoTable } from "./jobInfo";
 import { TopicTable } from "./topic";
 
-export const difficultyEnum = pgEnum("difficulty", ["easy", "medium", "hard"]);
-
-export const questionTypeEnum = pgEnum("question_type", [
-  "behavioral",
-  "technical",
-  "coding",
-  "system-design",
-]);
+export { difficultyEnum, questionTypeEnum };
 
 export const QuestionTable = pgTable("questions", {
   id,
