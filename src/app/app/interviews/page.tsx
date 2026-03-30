@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import { getInterviews } from '@/features/interviews/dbCache';
 import { getJobInfos } from '@/features/jobInfos/dbCache';

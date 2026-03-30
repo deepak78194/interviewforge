@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';

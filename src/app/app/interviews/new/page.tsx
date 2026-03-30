@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getJobInfos } from '@/features/jobInfos/dbCache';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import { getJobInfos } from '@/features/jobInfos/dbCache';
 import { PlanForm } from '@/features/studyPlans/PlanForm';
