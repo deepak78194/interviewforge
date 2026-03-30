@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { notFound } from 'next/navigation';
 import { getJobInfo } from '@/features/jobInfos/dbCache';
 import { updateJobInfoAction } from '@/features/jobInfos/actions';

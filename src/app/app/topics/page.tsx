@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import { getTopics, getTopicsByCategory } from '@/features/topics/dbCache';
 import { Badge } from '@/components/ui/badge';

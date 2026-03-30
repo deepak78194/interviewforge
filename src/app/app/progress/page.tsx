@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getPracticeHistory } from '@/features/progress/dbCache';
 import { ScoreTrendChart } from '@/features/progress/ScoreTrendChart';
 import { ActivityHeatmap } from '@/features/progress/ActivityHeatmap';
